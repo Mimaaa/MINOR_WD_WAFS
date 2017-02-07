@@ -7,3 +7,5 @@ Hoi
 Web App From Scratch - Minor Web Development
 
 Hoi
+
+this is a funny [link](https://www.hometrainershop.nl/product/756965/category-249257/waterrower-natural-beuken.html)
