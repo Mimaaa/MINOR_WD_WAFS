@@ -14,4 +14,4 @@ Ik wilde ook niemand lastig vallen, maar ik ben erachter gekomen dat mensen het 
 
 Pierre heeft mij goed op weg geholpen door duidelijk uit te leggen wat er van opdracht 5 verwacht wordt en hoe bepaalde concepten werken. We zijn de opdracht stapsgewijs doorlopen en ik ben op het moment een stuk wijzer dan daravoor.
 
-Om mijn JavaScript kennis te vergroten ben ik de afgelopen tijd al aan de gang gegaan met de opdrachten op FreeCodeCamp, maar vandaag heb ik van een klasgenoot een link naar een goede JS tutorial gekregen  (www.javascript30.com) die hem heel goed heeft geholpen, dus ik ga daar eerst mee aan de slag.
+Om mijn JavaScript kennis te vergroten ben ik de afgelopen tijd al aan de gang gegaan met de opdrachten op FreeCodeCamp, maar vandaag heb ik van Luuk een link naar een goede JS tutorial gekregen  (www.javascript30.com) die hem heel goed heeft geholpen, dus ik ga daar eerst mee aan de slag.
