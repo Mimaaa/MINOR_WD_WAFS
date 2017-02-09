@@ -85,7 +85,6 @@ section:nth-of-type(2) p {
 
 section:nth-of-type(3) {
   padding: 1em;
-  background-color: black;
 }
 
 section:nth-of-type(3) section {
