@@ -12,6 +12,6 @@ Hetgeen wat ik voornamelijk lastig vind is het weten wanneer ik bepaalde code mo
 
 Ik wilde ook niemand lastig vallen, maar ik ben erachter gekomen dat mensen het helemaal niet erg vinden om mij te helpen wanneer ik er even niet uit kom, wat ik erg op prijs stel.
 
-Pierre heeft mij goed op weg geholpen door duidelijk uit te leggen wat er van opdracht 5 verwacht wordt en hoe bepaalde concepten werken. We zijn de opdracht stapsgewijs doorlopen en ik ben op het moment een stuk wijzer dan daravoor.
+Pierre heeft mij goed op weg geholpen door duidelijk uit te leggen wat er van opdracht 5 verwacht wordt en hoe bepaalde concepten werken. We zijn de opdracht stapsgewijs doorgelopen en ik ben op het moment een stuk wijzer dan daravoor.
 
 Om mijn JavaScript kennis te vergroten ben ik de afgelopen tijd al aan de gang gegaan met de opdrachten op FreeCodeCamp, maar vandaag heb ik van Luuk een link naar een goede JS tutorial gekregen  (www.javascript30.com) die hem heel goed heeft geholpen, dus ik ga daar eerst mee aan de slag.
