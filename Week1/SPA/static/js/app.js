@@ -12,23 +12,11 @@ week even opfrissen. Excuus.*/
   // Hier zeg ik dat de "homepagina" de hash "home" moet meekrijgen
   window.location.hash = '#home';
 
-  // Hier selecteer ik alle secties en zeg ik dat de eerste child niet geselecteerd moet
-  // worden waardoor ik er uiteindelijk voor zorg dat de navigatie niet verborgen wordt.
-  var sectionsRemove = document.querySelectorAll('section:not(:first-child');
-
-  // Hier maak ik weer gebruik van een IFFE om de for loop uit de global scope te houden.
-  // In de for loop wordt gekeken naar hoeveel secties er zijn en die worden vervolgens verborgen.
-  (function () {
-    for (var i = 0; i < sectionsRemove.length; i++) {
-      sectionsRemove[i].classList.add('hidden');
-    }
-  })();
-
   // Hier maak ik het app object aan met daarin een functie waarin routes wordt aangeroepen.
   var app = {
     init: function() {
       routes.init();
-
+      sections.remove();
     }
   };
 
@@ -67,6 +55,7 @@ week even opfrissen. Excuus.*/
   // Het object sections wordt hier aangemaakt met daarin de toggle functie die als
   // parameter de route heeft meegekregen.
   var sections = {
+    notFirstChild: document.querySelectorAll('section:not(:first-child'),
     toggle: function(route){
 
       // Hier zijn twee variabelen aangemaakt waarin ik verwijs naar de old en new properties
@@ -77,6 +66,12 @@ week even opfrissen. Excuus.*/
       // Hier worden de schermen toegevoegd(weergegeven) of verwijderd (niet-weergegeven).
       oldScreen.classList.add('hidden');
       newScreen.classList.remove('hidden');
+    },
+    
+    remove: function() {      
+      for (var i = 0; i < sections.notFirstChild.length; i++) {
+        sections.notFirstChild[i].classList.add('hidden');
+      }    
     }
   };
   app.init();
