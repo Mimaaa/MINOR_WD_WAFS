@@ -1,11 +1,9 @@
-# Reflectie Week 1
+# Reflection Week 1
 
-Het is alweer een tijdje geleden dat ik met JavaScript heb gewerkt en eerlijk gezegd was ik er destijds ook niet goed in, dus ik vond het wel lastig om ermee aan de slag te gaan.
+It was a long time ago since I've worked with JavaScript and then I wasn't good at it either to be honest. Which made it tough for me to get started.
 
-Hetgeen wat ik voornamelijk lastig vind is het weten wanneer ik bepaalde code moet toepassen. Om een analogie te nemen: wanneer ik in HTML een tabel in elkaar zet, dan weet ik precies welke elementen ik bij elkaar moet schrapen om die tabel samen te stellen. In JavaScript is het nog te abstract voor mij om hetzelfde te repliceren.
+The thing that I struggled the most with was to know when to apply certain kind of code. To express myself in simpler terms: when I want to make a table in HTML I know which elements I need to combine to construct the table. In JavaScript it's still to abstract for me to reach the same goal.
 
-Ik wilde ook niemand lastig vallen, maar ik ben erachter gekomen dat mensen het helemaal niet erg vinden om mij te helpen wanneer ik er even niet uit kom, wat ik erg op prijs stel.
+I didn't want to bother anyone, but I found out that people didn't mind helping me out when I needed some help, which I appreciated a lot. Pierre helped me a lot by guiding me through the process which made me understand the code that was expected much better.
 
-Pierre heeft mij goed op weg geholpen door duidelijk uit te leggen wat er van opdracht 5 verwacht wordt en hoe bepaalde concepten werken. We zijn de opdracht stapsgewijs doorgelopen en ik ben op het moment een stuk wijzer dan daarvoor.
-
-Om mijn JavaScript kennis te vergroten ben ik de afgelopen tijd al aan de gang gegaan met de opdrachten op FreeCodeCamp, maar vandaag heb ik van Luuk een link naar een goede JS tutorial gekregen  (www.javascript30.com) die hem heel goed heeft geholpen, dus ik ga daar eerst mee aan de slag.
+To increase my knowledge of JavaScript I've started with the exercises on FreeCodeCamp.com, but Luuk gave me a link to a tutorial that is respected by many (www.javascript30.com) and which helped him learn a lot about JS. I'm going to follow that course as well to make sure I have a much better understanding of JavaScript.
