@@ -1,4 +1,4 @@
-[Klik hier voor de GitHub Page](https://mimaaa.github.io/index.html)
+[Klik hier voor de GitHub Page](https://mimaaa.github.io/WAFS/SPA/index.html)
 
 ~~# 1 N33D F33D84CK~~
 
