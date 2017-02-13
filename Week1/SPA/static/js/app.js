@@ -1,77 +1,36 @@
-/*Zoals je in de README hebt gelezen heeft Pierre mij geholpen met het begrijpen van
-de opdracht en hoe de code in elkaar "hoort" te zitten. Op het moment van schrijven
-ben ik wel vergeten wat er op enkele plekken ook alweer gebeurd. Ik zal dat volgende
-week even opfrissen. Excuus.*/
-
-// Hier wordt een IFFE aangemaakt
+// Hier wordt een IFFE aangemaakt.
 (function() {
-
-  // Hier zorg ik ervoor dat ik de strict mode aan heb staan
+  // Strict mode wordt aangezet.
   "use strict";
 
-  // Hier zeg ik dat de "homepagina" de hash "home" moet meekrijgen
-  window.location.hash = '#home';
-
-  // Hier maak ik het app object aan met daarin een functie waarin routes wordt aangeroepen.
+  // Ik maak hier drie objecten aan: app, routes en sections.
+  // In het app-object wordt een functie aangemaakt waarin het routes-object wordt aangesproken met de init property.
   var app = {
     init: function() {
       routes.init();
-      sections.remove();
     }
   };
-
-  /* Hier maak ik een routes object aan met daarin een functie. In de functie maak ik
-  verschillende variabelen aan die uiteindelijk de locatie en het toggelen gaan verzorgen.*/
-
-  /* Als ik het goed begrijp gebeurd het volgende: in het routes object zeg ik dat "location"
-  het huidige scherm is (window). Vervolgens zeg ik dat oldHash de locatie + hash (ID) is.
-  Vervolgens zeg ik dat de newHash het ID van de oude Hash overneemt?*/
+  // In het routes-object wordt het sections-object aangesproken met de toggle property.
   var routes = {
     init: function(){
-        var location = window.location;
-        var oldHash = location.hash;
-        var newHash = oldHash;
-
-          // Hieronder wordt de hashchange listener aangemaakt, de route wordt bepaald
-          // en uiteindelijk wordt naar de toggle functie verwezen.
-          window.onhashchange = function(){
-            oldHash = newHash;
-            newHash = location.hash;
-
-            // Hier wordt route aangemaakt met daarin de old en new properties.
-            var route = {
-              old: oldHash,
-              new: newHash
-            };
-
-              sections.toggle(route);
-          };
-    }
+              sections.toggle();
+              // Hier wordt gechecked welke hash op het moment aanwezig is.
+              window.addEventListener('hashchange', sections.toggle, false);
+          }
   };
-
-  // Ik log hier het routes object om te kijken wat er gebeurd.
-  console.log(routes);
-
-  // Het object sections wordt hier aangemaakt met daarin de toggle functie die als
-  // parameter de route heeft meegekregen.
+  // In het sections object krijgt de toggle property een functie mee.
   var sections = {
-    notFirstChild: document.querySelectorAll('section:not(:first-child'),
-    toggle: function(route){
-
-      // Hier zijn twee variabelen aangemaakt waarin ik verwijs naar de old en new properties
-      // uit het routes object.
-      var oldScreen = document.querySelector(route.old);
-      var newScreen = document.querySelector(route.new);
-
-      // Hier worden de schermen toegevoegd(weergegeven) of verwijderd (niet-weergegeven).
-      oldScreen.classList.add('hidden');
-      newScreen.classList.remove('hidden');
-    },
-    
-    remove: function() {      
-      for (var i = 0; i < sections.notFirstChild.length; i++) {
-        sections.notFirstChild[i].classList.add('hidden');
-      }    
+    toggle: function(){
+      // Ik heb hier een ternory staan waarin de route var wordt aangemaakt die window.location.hash representeert.
+      // Als die gelijk staat aan niks dan krijgt die de hash #start mee.
+      // Is er wel een hash aanwezig dan gaat 'ie naar die hash.
+      var route = window.location.hash === '' ? '#start' : window.location.hash;
+      // Met een querySelectorAll hide ik alle sections binnen het main element.
+      document.querySelectorAll('main>section').forEach(function (section){
+        section.classList.add('hidden');
+      });
+      //Met een querySelector haal ik de huidige route op en zet deze op visible.
+      document.querySelector(route).classList.remove('hidden');
     }
   };
   app.init();
