@@ -64,7 +64,7 @@ p {
 
 /* FIRST SECTION */
 
-body > section:nth-of-type(1) {
+header nav {
   border-bottom    : 1px solid white;
   background-color : black;
   -webkit-box-flex             : 1;
@@ -72,14 +72,14 @@ body > section:nth-of-type(1) {
           flex             : 1 100%;
 }
 
-section:nth-of-type(1) ul {
+header nav ul {
   display    : -webkit-box;
   display    : -ms-flexbox;
   display    : flex;
   list-style : none;
 }
 
-section:nth-of-type(1) li {
+header nav ul li {
   text-align : center;
   font-size  : 2em;
   -webkit-box-flex       : 1;
@@ -87,44 +87,44 @@ section:nth-of-type(1) li {
           flex       : 1 50%;
 }
 
-section:nth-of-type(1) a {
+header nav ul li a {
   color : #F4FFFD;
 }
 
-section:nth-of-type(1) a:hover {
+header nav ul li a:hover {
   color : #545E75;
 }
 
 /* SECOND SECTION */
 
-section:nth-of-type(2) {
+main #start {
   padding     : 1em;
   -webkit-box-align : center;
       -ms-flex-align : center;
           align-items : center;
 }
 
-section:nth-of-type(2) article {
+main #start article {
   max-width : 32em;
   margin    : auto;
 }
 
-section:nth-of-type(2) p {
+main #start p {
   text-align : center;
 }
 
 /* THIRD SECTION */
 
-section:nth-of-type(3) {
+main #best-practices {
   padding : 1em;
 }
 
-section:nth-of-type(3) section {
+main #best-practices section {
   max-width : 80%;
   margin    : auto;
 }
 
-section:nth-of-type(3) img {
+main #best-practices img {
   width   : 100%;
   margin  : auto;
   opacity : 0.3;
@@ -141,7 +141,7 @@ section:nth-of-type(3) img {
        and (max-device-width               : 1600px)
        and (-webkit-min-device-pixel-ratio : 2)
        and (min-resolution                 : 192dpi) {
-  section:nth-of-type(3) section {
+  main #best-practices section {
     max-width : 50%;
   }
 }
@@ -151,15 +151,15 @@ section:nth-of-type(3) img {
        and (max-device-width               : 480px)
        and (-webkit-min-device-pixel-ratio : 2)
        and (orientation                    : portrait) {
-  section:nth-of-type(1) ul {
+  header nav ul {
     flex-wrap : wrap;
   }
 
-  section:nth-of-type(1) li {
+  header nav ul li {
     flex : 1 100%;
   }
 
-  section:nth-of-type(1) ul > li:nth-of-type(2) {
+header nav ul > li:nth-of-type(2) {
     padding-top : .7em;
   }
 }
