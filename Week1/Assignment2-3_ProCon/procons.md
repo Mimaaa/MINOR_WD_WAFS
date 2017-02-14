@@ -28,7 +28,7 @@ Heb je nou een idee dat je graag op korte termijn aan iemand wil presenteren dan
 
 Uiteindelijk komt het hier op neer: wat is het doel van het project? :smile: :boom:
 
-Mocht je nog een amusant doch interessant artikel over frameworks willen lezen, dan vind ik [dit een hele leuke](https://www.hometrainershop.nl/product/756965/category-249257/waterrower-natural-beuken.html).
+Mocht je nog een amusant doch interessant artikel over frameworks willen lezen, dan vind ik [dit een hele leuke](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.fb7dxgcds).
 
 
 ### Bronnen
