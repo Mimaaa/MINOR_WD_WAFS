@@ -65,4 +65,9 @@ main section article li {
 
 * {
   font-family: Roboto;
+
+}
+
+section.hidden {
+  display : none !important;
 }

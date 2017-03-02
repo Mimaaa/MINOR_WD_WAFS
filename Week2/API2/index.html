@@ -20,7 +20,7 @@
 <body>
   <main>
     <section id="upcomingMovies">
-      
+
     </section>
     <section id="playingNow">
 
@@ -32,6 +32,7 @@
 
   <!-- Handlebars script template -->
   <script id="templateUpcomingMovies" type="text/x-handlebars-template">
+    {{#each this}}
     <article class="upcomingMoviesData">
       <h1>{{title}}</h1>
 
@@ -43,8 +44,11 @@
         <li>Votes: {{vote_count}}</li>
       </ul>
     </article>
+    {{/each}}
   </script>
+
   <script id="templatePlayingNow" type="text/x-handlebars-template">
+    {{#each this}}
     <article class="playingNowData">
       <h1>{{title}}</h1>
 
@@ -56,8 +60,10 @@
         <li>Votes: {{vote_count}}</li>
       </ul>
     </article>
+    {{/each}}
   </script>
   <script id="templateTopRated" type="text/x-handlebars-template">
+    {{#each this}}
     <article class="topRatedData">
       <h1>{{title}}</h1>
 
@@ -69,6 +75,7 @@
         <li>Votes: {{vote_count}}</li>
       </ul>
     </article>
+    {{/each}}
   </script>
 
   <script type="text/javascript" src="static/js/handlebars.js"></script>

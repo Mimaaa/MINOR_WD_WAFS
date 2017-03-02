@@ -1,8 +1,4 @@
-// Made us of the IIFE
-(function(){
 
-// Used strict mode
-"use strict";
 
 // Set all variables within the appSettings object
 var appSettings = {
@@ -24,15 +20,16 @@ var appSettings = {
       getData.init(appSettings.urlUpcomingMovies);
       getData.init(appSettings.urlPlayingNow);
       getData.init(appSettings.urlTopRated);
+
+      return routes.init;
     }
   };
 
   // Routes are getting defined : still not working
   var routes = {
-    init: function(){
-              sections.toggle();
-              window.addEventListener('hashchange', sections.toggle, false);
-          }
+    init: window.addEventListener('hashchange', function(){
+      sections.toggle();
+    }, false)
   };
 
   // Sections object with a toggle method that has a function
@@ -40,6 +37,8 @@ var appSettings = {
     toggle: function(){
       // Used a ternary that looks if there is section present and which sections gets the homepage
       var route = window.location.hash === '' ? '#upcomingMovies' : window.location.hash;
+
+      console.log(document.querySelectorAll('main>section'));
       // With the querySelectorAll I'm hiding all the sections within the main element
       document.querySelectorAll('main>section').forEach(function (section){
         section.classList.add('hidden');
@@ -52,13 +51,27 @@ var appSettings = {
   // Render object with a function that gets the data param
   // I use this function to
   var render = function (data) {
-      data.results.forEach(function (item) {
-        appSettings.html = appSettings.templateUpcomingMovies(item);
-        appSettings.upcomingMovies.innerHTML += appSettings.html;
-      console.log(data);
-    });
+      outputTemplateData(data.results, "#templateUpcomingMovies", "#upcomingMovies");
+      outputTemplateData(data.results, "#templatePlayingNow", "#playingNow");
+      outputTemplateData(data.results, "#templateTopRated", "#topRated");
   };
 
+
+  function outputTemplateData(data, origin, destination){
+    var html = Handlebars.compile(document.querySelector(origin).innerHTML);
+
+    var output = data.map(function(item){
+      return {
+        title: item.title,
+        poster_path: item.poster_path,
+        release_date: item.release_date,
+        vote_average: item.vote_average,
+        vote_count: item.vote_count,
+      };
+    });
+    console.log(output);
+      document.querySelector(destination).innerHTML = html(output);
+  }
 
 
   // get data object
@@ -75,7 +88,6 @@ var appSettings = {
 
   app.init();
 
-})();
 
 
 // MICROLIBS:
